@@ -7,9 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace AirSensor.FunctionApp
 {
-    public class SensorReportHandlingFunction
+    public class SubmitSensorReadingsFunction
     {
-        [FunctionName("Sensor readings endpoint")]
+        [FunctionName("SubmitSensorReadings")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest request, ILogger log)
         {

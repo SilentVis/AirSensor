@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "air_sensor_api": {
+    "AirSensorApi": {
       "commandName": "Project",
       "commandLineArgs": "--port 7195",
-      "launchBrowser": false
+      "launchBrowser": true
     }
   }
 }
