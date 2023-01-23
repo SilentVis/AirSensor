@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirSensorFunctionsApp", "air-sensor-api\AirSensorFunctionsApp.csproj", "{CE888A0D-4881-4A6C-8ED5-F339990C44E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE888A0D-4881-4A6C-8ED5-F339990C44E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE888A0D-4881-4A6C-8ED5-F339990C44E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE888A0D-4881-4A6C-8ED5-F339990C44E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE888A0D-4881-4A6C-8ED5-F339990C44E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {537126F0-5847-4A73-9872-5012215F1BD1}
+	EndGlobalSection
+EndGlobal
