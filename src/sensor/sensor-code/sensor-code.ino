@@ -7,7 +7,7 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 
-#include "SensorConfig.h"
+#include "sensor-config.h"
 
 
 void setup() {
@@ -73,18 +73,18 @@ void handleNoSensor(){
   Serial.print("I have no sensor, so I have no clue what to do");
 }
 
-void printDataSerial(float temp, float hum, String WifiStatus)
+void printDataSerial(float temp, float hum, String wifiStatus)
 {
   Serial.print("Temperature: ");
-  Serail.print(temp);
+  Serial.print(temp);
   Serial.println(" C");
 
   Serial.print("Humidity: ");
-  Serail.print(hum);
+  Serial.print(hum);
   Serial.println(" %");
 
   Serial.print("Wifi status: ");
-  Serail.println(Wifi);
+  Serial.println(wifiStatus);
   Serial.println();
   Serial.println();
 }
@@ -160,7 +160,9 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 void initDisplay(){
   for(int cnt = 0; cnt<5;cnt++){
     if(cnt > 0){
-      Serial.print("Retry #" + cnt.toString() + "...");
+      Serial.print("Retry #");
+      Serial.print(cnt);
+      Serial.println("...");
     }
 
     if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -168,7 +170,7 @@ void initDisplay(){
 
       Serial.println("Display initialization failed");
       if (cnt == 5){
-        Serial.println("Last retry failed.. Device ")
+        Serial.println("Last retry failed.. Device ");
         return;
       }
 
