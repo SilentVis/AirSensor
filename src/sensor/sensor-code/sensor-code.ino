@@ -17,7 +17,7 @@ void setup() {
   Serial.print(DEVICE_NAME);
   Serial.println("...");
 
-  Wire.begin();
+  Wire.begin(2,0);
 
   if(SENSOR_CONNECTED){
     Serial.print("Initializing air sensor...");
@@ -147,7 +147,15 @@ String getWifiConnectedStatus(){
 }
 
 void sendDataToCloud(float temp, float hum){
+  HTTPClient http;
+  http.begin(client, AZURE_APP_URL);
+  http.addHeader("Content-Type", "application/json");
 
+  String requestBody = "{\"temperature\":" + String(temp) + ",\"humidity\":" + String(hum) + ",\"deviceName\":\"" + DEVICE_NAME + "\"}";
+
+  int httpResponseCode = http.POST(requestBody);
+
+  http.end();
   
 }
 
@@ -173,7 +181,7 @@ void initDisplay(){
         Serial.println("Last retry failed.. Device ");
         return;
       }
-
+      delay(500);
       cnt++;
     }
     else{

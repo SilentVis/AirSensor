@@ -13,6 +13,9 @@
 #define OLED_RESET -1 
 #define SCREEN_ADDRESS 0x3C
 
-//Wifi settings
+// Wifi settings
 #define STASSID "west-line"
 #define STAPSK "2392129v"
+
+// API settings
+#define AZURE_APP_URL "https://silentapp.azurewebsites.net/api/StoreSensorReading?"
